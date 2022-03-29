@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulaotr | Haykal</title>
+    <style>
+        * {
+            margin-top: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            border-radius: 5px;
+        }
+
+        .body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 30vh;
+            background: #506D84;
+        }
+
+        .calculator {
+            margin-top: 1rem;
+            position: relative;
+            display: grid;
+        }
+
+        .calculator .value {
+            grid-column: span 4;
+            width: 244px;
+            height: 100px;
+            text-align: right;
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 18px;
+            background: #FFF8E5;
+        }
+
+        .calculator span {
+            display: grid;
+            width: 60px;
+            height: 60px;
+            color: #2B2B2B;
+            background: #D3E4CD;
+            place-items: canter;
+            align-items: center;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, .1);
+            cursor: pointer;
+        }
+
+        .calculator span:hover {
+            background-color: #99A799;
+        }
+
+        .calculator span:active {
+            background: #3b5196;
+            color: #fff;
+        }
+
+        .calculator span.clear {
+            grid-column: span 2;
+            width: 120px;
+            background: #E05D5D;
+        }
+
+        .calculator span.plus {
+            grid-row: span 2;
+            height: 120px;
+        }
+
+        .calculator span.equal {
+            background: #FFB344;
+        }
+
+        a {
+            font-size: 15px;
+            color: #000;
+            font-weight: 400;
+            text-decoration: none;
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        a:hover {
+            color: #fff;
+            background: #18191F;
+            transition: all easy 0.3s;
+        }
+
+        .sub-body {
+            background: #FFFFFF;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            overflow: hidden;
+            transition: all 0.2s;
+            width: 340px;
+        }
+
+        /* Responsive */
+
+        @media all and (max-width: 1000px) {
+            * {
+                margin-top: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: sans-serif;
+                border-radius: 5px;
+            }
+
+            .body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 30vh;
+                background: #506D84;
+            }
+        }
+
+        @media all and (max-width: 670px) {
+            * {
+                margin-top: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: sans-serif;
+                border-radius: 5px;
+            }
+
+            .body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 30vh;
+                background: #506D84;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <br>
+    <h1 style="text-align: center;">Kalkulator</h1>
+    <h5 style="text-align: center;">By Muhammad Haykal AS</h5>
+    <br>
+    <div class="sub-body">
+        <div class="body">
+            <form class="calculator" name="calc">
+                <input type="text" class="value" name="txt" readonly="">
+                <span class="num clear" onClick="document.calc.txt.value =''">c</span>
+                <span class="num" onClick="document.calc.txt.value +='/'">/</span>
+                <span class="num" onClick="document.calc.txt.value +='*'">*</span>
+                <span class="num" onClick="document.calc.txt.value +='7'">7</span>
+                <span class="num" onClick="document.calc.txt.value +='8'">8</span>
+                <span class="num" onClick="document.calc.txt.value +='9'">9</span>
+                <span class="num" onClick="document.calc.txt.value +='-'">-</span>
+                <span class="num" onClick="document.calc.txt.value +='4'">4</span>
+                <span class="num" onClick="document.calc.txt.value +='5'">5</span>
+                <span class="num" onClick="document.calc.txt.value +='6'">6</span>
+                <span class="num plus" onClick="document.calc.txt.value +='+'">+</span>
+                <span class="num" onClick="document.calc.txt.value +='1'">1</span>
+                <span class="num" onClick="document.calc.txt.value +='2'">2</span>
+                <span class="num" onClick="document.calc.txt.value +='3'">3</span>
+                <span class="num" onClick="document.calc.txt.value +='0'">0</span>
+                <span class="num" onClick="document.calc.txt.value +='00'">00</span>
+                <span class="num" onClick="document.calc.txt.value +='.'">.</span>
+                <span class="num equal" onClick="document.calc.txt.value = eval(calc.txt.value)">=</span>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
